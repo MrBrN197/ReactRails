@@ -1,5 +1,5 @@
 class Api::MessagesController < ApplicationController
   def index
-    render json: {}
+    render json: { message: Message.random }
   end
 end
