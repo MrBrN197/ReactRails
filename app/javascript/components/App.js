@@ -1,11 +1,19 @@
 import React from "react"
 import PropTypes from "prop-types"
+
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Greeting from './Greeting';
+
 class App extends React.Component {
   render () {
     return (
-      <React.Fragment>
-        <h1>App</h1>
-      </React.Fragment>
+      <Router>
+        <Routes>
+          <Route path="/">
+            <Route index element={<Greeting />} />
+          </Route>
+        </Routes>
+      </Router>
     );
   }
 }
