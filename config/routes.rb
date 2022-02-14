@@ -3,6 +3,10 @@ Rails.application.routes.draw do
 
   root 'static#index'
 
+  namespace :api, defaults: { format: 'json' } do
+    get 'messages', to: 'messages#index'
+  end
+
   # Defines the root path route ("/")
   # root "articles#index"
 end
